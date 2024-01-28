@@ -1,13 +1,13 @@
 package com.tamerm.FlightSearchApi.entities.concretes;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "Airports")
-@Getter
-@Setter
 public class Airport {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,4 +16,6 @@ public class Airport {
     @Column(name = "city", nullable = false)
     private String city;
 
+    public Airport(String arrivalAirportCode, String arrivalCity) {
+    }
 }

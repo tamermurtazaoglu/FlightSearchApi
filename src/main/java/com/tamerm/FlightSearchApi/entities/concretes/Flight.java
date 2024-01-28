@@ -1,15 +1,15 @@
 package com.tamerm.FlightSearchApi.entities.concretes;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.Date;
 
 @Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "Flights")
-@Getter
-@Setter
 public class Flight {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
